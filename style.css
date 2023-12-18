@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    border: 1px solid red;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
