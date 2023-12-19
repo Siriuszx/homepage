@@ -2,6 +2,8 @@
     --container-text-clr: gray;
     --container-header-txt-clr: #000;
     --container-bg-clr: #fff;
+    --section-bg-clr: rgb(0, 201, 201);
+    --footer-clr: #ffffff;
 }
 
 * {
@@ -32,7 +34,6 @@ a {
     max-width: 100%;
 
     display: block;
-    object-fit: cover;
     box-shadow: 0 0 1em rgb(0 0 0 / 0.3);
 }
 
@@ -73,20 +74,12 @@ a {
 
 header {
     padding: 4em;
-    background-color: rgb(0, 201, 201);
+    background-color: var(--section-bg-clr);
 }
 
 .container-intro-item {
     display: grid;
     grid-template-columns: 1fr 1fr;
-}
-
-.container-intro-photo {
-
-}
-
-.container-intro-photo-item {
-
 }
 
 .container-contents-intro {
@@ -101,21 +94,17 @@ header {
     font-size: 1.5rem;
 }
 
-.container-intro-contents-icon {
-    
-}
-
 .contents-intro-icon {
     font-size: 2.5rem;
 }
 
 main {
     padding: 4em;
-    gap: 2em;
+    gap: 2rem;
 }
 
 .work-header {
-    text-decoration: underline;
+    font-weight: 300;
     margin-bottom: 4rem;
     align-self: flex-start;
 }
@@ -127,7 +116,183 @@ main {
 }
 
 footer {
+    padding: 4rem;
+    background-color: var(--section-bg-clr);
+}
+
+.contact-me {
+    color: var(--footer-clr);
+    font-size: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+}
+
+.contact-me-contents {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.container-contact-me-photo {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.contact-me-photo-item {
+    max-width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.contact-me-container-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contacts-item {
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
+    gap: 1rem;
+}
+
+.contacts-item-icon {
+    width: 32px;
+    height: auto;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(125deg) brightness(103%) contrast(101%);
+}
+
+.contact-me-container-icons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+
+.contact-me-item-icon {
+    font-size: 3rem;
+}
+
+@media (max-width: 1000px) {
+    header {
+        padding: 0;
+    }
+
+    .container-intro-item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .container-work {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    .work-header {
+        margin: 2rem 0 2rem 0;
+    }
+
+    .container-contents-icons {
+        align-self: center;
+    }
+
+    .contents-icon {
+        font-size: 1.8rem;
+    }
+
+    footer {
+        padding: 1rem;
+    }
+
+    .contact-me {
+        text-align: center;
+        font-size: 1.2rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-me-container-address {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contacts-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container-contact-me-photo {
+        display: none;
+    }
+
+    .contact-me-container-icons {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact-me-item-icon {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    header {
+        padding: 0;
+    }
+
+    .container-intro-item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .container-work {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    .work-header {
+        margin: 2rem 0 2rem 0;
+    }
+
+    .container-contents-icons {
+        align-self: center;
+    }
+
+    .contents-icon {
+        font-size: 1.8rem;
+    }
+
+    footer {
+        padding: 1rem;
+    }
+
+    .contact-me {
+        text-align: center;
+        font-size: 1.2rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container-contact-me-photo {
+        display: none;
+    }
+
+    .contact-me-container-icons {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact-me-item-icon {
+        font-size: 2.2rem;
+    }
 }
